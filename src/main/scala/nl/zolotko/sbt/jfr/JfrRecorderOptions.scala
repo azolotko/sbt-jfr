@@ -1,9 +1,8 @@
-package nl.zolotko.sbtjfr
+package nl.zolotko.sbt.jfr
 
 import java.nio.file.Path
 
-/**
-  * Describes JFR recorder options.
+/** Describes JFR recorder options.
   *
   * @param globalBufferSize Specifies the total amount of primary memory used for data retention.
   *                         The default value is based on the value specified for memorySize.

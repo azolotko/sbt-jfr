@@ -1,6 +1,6 @@
-package nl.zolotko.sbtjfr
+package nl.zolotko.sbt.jfr
 
-import nl.zolotko.sbtjfr.Encoders.{flightRecorderOptions, startFlightRecording}
+import Encoders.{flightRecorderOptions, startFlightRecording}
 import sbt.Keys._
 import sbt._
 import sbt.plugins.JvmPlugin
@@ -13,7 +13,7 @@ object SbtJfrPlugin extends AutoPlugin {
   trait JfrEnabledMode
 
   object autoImport {
-    val jfrRecordings = settingKey[Seq[JfrRecording]]("List of JFR recordings to be started")
+    val jfrRecordings      = settingKey[Seq[JfrRecording]]("List of JFR recordings to be started")
     val jfrRecorderOptions = settingKey[Option[JfrRecorderOptions]]("Options that control the behavior of JFR")
   }
 

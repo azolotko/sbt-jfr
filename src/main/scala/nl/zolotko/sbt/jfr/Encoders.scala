@@ -1,4 +1,4 @@
-package nl.zolotko.sbtjfr
+package nl.zolotko.sbt.jfr
 
 import java.nio.file.Path
 import scala.concurrent.duration.FiniteDuration
@@ -9,16 +9,16 @@ object Encoders {
 
     val params = parameters(
       Map(
-        "delay" -> delay.map(finiteDuration),
-        "disk" -> disk.map(boolean),
-        "dumponexit" -> dumpOnExit.map(boolean),
-        "duration" -> duration.map(finiteDuration),
-        "filename" -> fileName.map(path),
-        "name" -> name,
-        "maxage" -> maxAge.map(finiteDuration),
-        "maxsize" -> maxSize.map(size),
+        "delay"            -> delay.map(finiteDuration),
+        "disk"             -> disk.map(boolean),
+        "dumponexit"       -> dumpOnExit.map(boolean),
+        "duration"         -> duration.map(finiteDuration),
+        "filename"         -> fileName.map(path),
+        "name"             -> name,
+        "maxage"           -> maxAge.map(finiteDuration),
+        "maxsize"          -> maxSize.map(size),
         "path-to-gc-roots" -> pathToGcRoots.map(boolean),
-        "settings" -> settings.map(path),
+        "settings"         -> settings.map(path)
       )
     )
 
@@ -30,16 +30,16 @@ object Encoders {
 
     val params = parameters(
       Map(
-        "globalbuffersize" -> globalBufferSize.map(size),
-        "maxchunksize" -> maxChunkSize.map(size),
-        "memorysize" -> memorySize.map(size),
-        "numglobalbuffers" -> numGlobalBuffers.map(count),
+        "globalbuffersize"      -> globalBufferSize.map(size),
+        "maxchunksize"          -> maxChunkSize.map(size),
+        "memorysize"            -> memorySize.map(size),
+        "numglobalbuffers"      -> numGlobalBuffers.map(count),
         "old-object-queue-size" -> oldObjectQueueSize.map(size),
-        "repository" -> repository.map(path),
-        "retransform" -> retransform.map(boolean),
-        "samplethreads" -> sampleThreads.map(boolean),
-        "stackdepth" -> stackDepth.map(count),
-        "threadbuffersize" -> threadBufferSize.map(size)
+        "repository"            -> repository.map(path),
+        "retransform"           -> retransform.map(boolean),
+        "samplethreads"         -> sampleThreads.map(boolean),
+        "stackdepth"            -> stackDepth.map(count),
+        "threadbuffersize"      -> threadBufferSize.map(size)
       )
     )
 

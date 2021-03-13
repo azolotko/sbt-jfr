@@ -1,10 +1,10 @@
-import nl.zolotko.sbtjfr.{JfrRecording, JfrRecorderOptions}
+import nl.zolotko.sbt.jfr.{JfrRecording, JfrRecorderOptions}
 import scala.concurrent.duration.DurationInt
 
 lazy val root = (project in file("."))
   .settings(
     version := "0.1",
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     jfrRecordings := Seq(
       JfrRecording(),
       JfrRecording(

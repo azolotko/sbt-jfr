@@ -1,10 +1,9 @@
-package nl.zolotko.sbtjfr
+package nl.zolotko.sbt.jfr
 
 import java.nio.file.Path
 import scala.concurrent.duration.FiniteDuration
 
-/**
-  * Describes a JFR recording.
+/** Describes a JFR recording.
   *
   * @param delay Specifies the delay between the Java application launch time and the start of the recording.
   *              By default, there's no delay.

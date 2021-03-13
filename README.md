@@ -7,19 +7,19 @@
 Add the following settings to your `project/plugins.sbt`:
 
 ```sbt
-addSbtPlugin("me.zolotko" % "sbt-jfr" % "latest.release")
+addSbtPlugin("nl.zolotko.sbt" % "sbt-jfr" % "latest.release")
 ```
 
 An example of `build.sbt` with two JFR recordings and overridden JFR recorder options:
 
 ```sbt
-import nl.zolotko.sbtjfr.{JfrRecording, JfrRecorderOptions}
+import nl.zolotko.sbt.jfr.{JfrRecording, JfrRecorderOptions}
 import scala.concurrent.duration.DurationInt
 
 lazy val root = (project in file("."))
   .settings(
     version := "0.1",
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     jfrRecordings := Seq(
       JfrRecording(),
       JfrRecording(
@@ -46,7 +46,8 @@ lazy val root = (project in file("."))
       sampleThreads = true.some,
       stackDepth = 96.some,
       threadBufferSize = 16384L.some
-    ).some
+    ).some,
+    fork := true
   )
 ```
 

@@ -1,0 +1,7 @@
+target/
+local.sbt
+secret/
+
+.idea/
+.bsp/
+project/project/

@@ -10,6 +10,8 @@ Add the following settings to your `project/plugins.sbt`:
 addSbtPlugin("nl.zolotko.sbt" % "sbt-jfr" % "latest.release")
 ```
 
+The latest version is [![Maven Central](https://maven-badges.herokuapp.com/maven-central/nl.zolotko.sbt/sbt-jfr/badge.svg?subject=sbt-jfr)](https://maven-badges.herokuapp.com/maven-central/nl.zolotko.sbt/sbt-jfr/)
+
 An example of `build.sbt` with two JFR recordings and overridden JFR recorder options:
 
 ```sbt

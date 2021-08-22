@@ -20,7 +20,7 @@ object SbtJfrPlugin extends AutoPlugin {
   import autoImport._
 
   override lazy val globalSettings = Seq(
-    jfrRecordings := Seq.empty,
+    jfrRecordings      := Seq.empty,
     jfrRecorderOptions := None
   )
 

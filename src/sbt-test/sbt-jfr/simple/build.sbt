@@ -3,7 +3,7 @@ import scala.concurrent.duration.DurationInt
 
 lazy val root = (project in file("."))
   .settings(
-    version := "0.1",
+    version      := "0.1",
     scalaVersion := "2.13.5",
     jfrRecordings := Seq(
       JfrRecording(),

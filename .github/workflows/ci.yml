@@ -20,9 +20,9 @@ jobs:
             ~/.cache/coursier/v1
             ~/.ivy2/cache
           key: ${{ runner.os }}-build-cache-${{ hashFiles('*.sbt') }}-${{ hashFiles('project/*') }}
-      - uses: olafurpg/setup-scala@v10
+      - uses: olafurpg/setup-scala@v13
         with:
-          java-version: zulu@17
+          java-version: zulu@1.17
       - run: sbt scalafmtCheckAll scalafmtSbtCheck scripted publishLocal
       - uses: actions/upload-artifact@v2
         with:
@@ -84,9 +84,9 @@ jobs:
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}
-      - uses: olafurpg/setup-scala@v10
+      - uses: olafurpg/setup-scala@v13
         with:
-          java-version: zulu@17
+          java-version: zulu@1.17
       - run: sbt publishSigned
         env: 
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}

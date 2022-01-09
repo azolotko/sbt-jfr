@@ -18,9 +18,9 @@ scmInfo := Some(
   )
 )
 
-scalacOptions := Seq("-deprecation", "-unchecked", "-feature")
-
 sbtPlugin := true
+
+scalacOptions += "-target:jvm-1.8"
 
 enablePlugins(SbtPlugin)
 
